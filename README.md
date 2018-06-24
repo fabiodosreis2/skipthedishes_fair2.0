@@ -38,8 +38,8 @@ We developed a RESTFUL API using Flask to expose this model.
 
 ### Authors
 
-[https://www.linkedin.com/in/fabiodosreis/](Fábio Eduardo dos Reis)
-[https://www.linkedin.com/in/herosaraujo/](Heros da Silva Araujo)
+(https://www.linkedin.com/in/fabiodosreis/)[Fábio Eduardo dos Reis]
+(https://www.linkedin.com/in/herosaraujo/)[Heros da Silva Araujo]
 
 
 
