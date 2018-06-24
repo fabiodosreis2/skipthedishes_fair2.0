@@ -33,7 +33,8 @@ We developed a RESTFUL API using Flask to expose this model.
        {"text_review": "your review about the project here"}
        
        Response
-       {"score": 4.5}
+       {"sentiment": "positive"}
+       {"sentiment": "negative"}
        ```
 
 ### How to Run
