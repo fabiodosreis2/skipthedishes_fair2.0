@@ -14,6 +14,7 @@ This project requires **Python >= 3.5** and the following Python libraries insta
 - [scikit-learn](http://scikit-learn.org/stable/)
 - [matplotlib](http://matplotlib.org/)
 - [seaborn](https://seaborn.pydata.org/)
+- [Flask](http://flask.pocoo.org)
 
 pip install -r requirements.txt
 
