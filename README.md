@@ -18,8 +18,11 @@ This project requires **Python >= 3.5** and the following Python libraries insta
 
 pip install -r requirements.txt
 
+- You have to install and run [docker](https://docs.docker.com/install/)
+
 ### Download the dataset
-[download.zip](https://www.kaggle.com/snap/amazon-fine-food-reviews/downloads/amazon-fine-food-reviews.zip/2)
+[download.zip](https://www.kaggle.com/snap/amazon-fine-food-reviews/downloads/amazon-fine-food-reviews.zip/2) and extract
+Reviews.csv for the project directory. 
 
 ### About the data
 We've got the texts reviews (Text column) and used TF-IDF transformation to extract features and the Score columns as the target.
@@ -36,12 +39,24 @@ We developed a RESTFUL API using Flask to expose this model.
        {"text_review": "your review about the project here"}
        
        Response
-       {"sentiment": "positive"}
-       {"sentiment": "negative"}
+       {"sentiment": "Positive"}
+       {"sentiment": "Negative"}
        ```
 
 ### How to Run
-
+1 - Run all steps in Jupyet Notebook to generate the model.
+2 - $python3 build_docker.py
+3 - docker run -p 805:805 vanhackthon
+4 - After you can use curl to post some review and get the response.
+    ```
+    curl -X POST \
+  http://localhost:805 \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 52dd3e4a-a671-4b29-9efc-9ea8ce96396b' \
+  -d '{
+    "text_review": "Product arrived labeled as Jumbo Salted Peanuts...the peanuts were actually small sized unsalted. Not sure if this was an error or if the vendor intended to represent the product as \"Jumbo\"."}'
+    ```
 
 
 ### Authors
