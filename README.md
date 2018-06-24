@@ -17,6 +17,8 @@ This project requires **Python >= 3.5** and the following Python libraries insta
 
 pip install -r requirements.txt
 
+### Download the dataset
+[download.zip](https://www.kaggle.com/snap/amazon-fine-food-reviews/downloads/amazon-fine-food-reviews.zip/2)
 
 ### About the data
 We've got the texts reviews (Text column) and used TF-IDF transformation to extract features and the Score columns as the target.
