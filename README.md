@@ -44,10 +44,14 @@ We developed a RESTFUL API using Flask to expose this model.
        ```
 
 ### How to Run
-1 - Run all steps in Jupyet Notebook to generate the model.
+1 - Run all steps in Jupyet Notebook to generate the model
+
 2 - $python3 build_docker.py
+
 3 - docker run -p 805:805 vanhackthon
+
 4 - After you can use curl to post some review and get the response.
+
     ```
     curl -X POST \
   http://localhost:805 \
