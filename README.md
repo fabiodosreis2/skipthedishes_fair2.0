@@ -2,7 +2,7 @@
 ### VANHACKTHON Fair 2.0
 
 ### Sentiment Analysis Amazon Fine Food Reviews
-We've got a dataset from [Kaggle](https://www.kaggle.com/snap/amazon-fine-food-reviews) and based on the customer review text we've build a model to predict the rating score [between 1 and 5] of the product.
+We've got a dataset from [Kaggle](https://www.kaggle.com/snap/amazon-fine-food-reviews) and based on the customer review text we've build a model to predict sentiment (positive, negative) about the product.
 
 
 ### Install
