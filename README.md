@@ -2,7 +2,7 @@
 ### VANHACKTHON Fair 2.0
 
 ### Sentiment Analysis Amazon Fine Food Reviews
-We've got a dataset from [Kaggle](https://www.kaggle.com/snap/amazon-fine-food-reviews) and based on the customer review text we've build a model to predict the rating score of the product.
+We've got a dataset from [Kaggle](https://www.kaggle.com/snap/amazon-fine-food-reviews) and based on the customer review text we've build a model to predict the rating score [between 1 and 5] of the product.
 
 
 ### Install
@@ -28,8 +28,12 @@ We developed a RESTFUL API using Flask to expose this model.
 
  ## API parameters
        ```
+       Request
        Content-Type = "application/json"
        {"text_review": "your review about the project here"}
+       
+       Response
+       {"score": 4.5}
        ```
 
 ### How to Run
@@ -38,8 +42,9 @@ We developed a RESTFUL API using Flask to expose this model.
 
 ### Authors
 
-(https://www.linkedin.com/in/fabiodosreis/)[Fábio Eduardo dos Reis]
-(https://www.linkedin.com/in/herosaraujo/)[Heros da Silva Araujo]
+[Fábio Eduardo dos Reis](https://www.linkedin.com/in/fabiodosreis/)
+
+[Heros da Silva Araujo](https://www.linkedin.com/in/herosaraujo/)
 
 
 
