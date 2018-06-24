@@ -53,13 +53,7 @@ We developed a RESTFUL API using Flask to expose this model.
 4 - After you can use curl to post some review and get the response.
 
     ```
-    curl -X POST \
-  http://localhost:805 \
-  -H 'Cache-Control: no-cache' \
-  -H 'Content-Type: application/json' \
-  -H 'Postman-Token: 52dd3e4a-a671-4b29-9efc-9ea8ce96396b' \
-  -d '{
-    "text_review": "Product arrived labeled as Jumbo Salted Peanuts...the peanuts were actually small sized unsalted. Not sure if this was an error or if the vendor intended to represent the product as \"Jumbo\"."}'
+    curl -X POST http://localhost:805  -H 'Content-Type: application/json' -d '{"text_review": "Your review here"}'
     ```
 
 
