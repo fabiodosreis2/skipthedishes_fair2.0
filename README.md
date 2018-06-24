@@ -43,6 +43,7 @@ We developed a RESTFUL API using Flask to expose this model.
 ### Authors
 
 [Fábio Eduardo dos Reis](https://www.linkedin.com/in/fabiodosreis/)
+
 [Heros da Silva Araujo](https://www.linkedin.com/in/herosaraujo/)
 
 
