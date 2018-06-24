@@ -5,27 +5,25 @@ import pandas as pd
 import os
 import socket
 import pickle
-import ujson
 
 app = Flask(__name__)
 
 
-count_vect = pickle.load(open('pkls/model.pkl', 'rb'))
-tf_transformer = pickle.load(open('pkls/model.pkl', 'rb'))
+count_vect = pickle.load(open('pkls/count_vectorizer.pkl', 'rb'))
+tf_transformer = pickle.load(open('pkls/tf_transformer.pkl', 'rb'))
 model = pickle.load(open('pkls/model.pkl', 'rb'))
 
 @app.route("/", methods=["POST"])
 def main():
     if request.json:
-        text = ujson.loads(text)
+        text = request.json
         if isinstance(text, dict):
             if 'text_review' in text.keys():
-                text = text['text_review']
-                text = request.json.lower().replace('[\.,&;\(\)]', '')
+                text = text['text_review'].lower().replace('[\.,&;\(\)]', '')
                 counts = count_vect.transform(pd.Series(text))
                 transformed = tf_transformer.transform(counts)
-                sentiment = 'Positive' if model.predict(transformed) else 'Negative'
-                return jsonify({'sentiment', sentiment}), 200
+                sentiment = 'Positive' if model.predict(transformed)[0] else 'Negative'
+                return jsonify({'sentiment': sentiment}), 200
     return '', 400
 
 if __name__ == "__main__":
